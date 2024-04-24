@@ -1,0 +1,49 @@
+.splash {
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+}
+
+.splash-image {
+    height: 40vmin;
+    width: 400vmin;
+    object-fit: cover;
+    object-position: center;
+}
+
+mainbody {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1 {
+    color: blue;
+}
+
+.content-boxes {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5%;
+}
+
+.boxed {
+    color: white;
+    border-radius: 10px;
+    height: 500px;
+    width: 22%;
+    background-color: darkcyan;
+}
+
+.boxed p {
+    margin: 0;
+}
+
+footer {
+    background-color: gray;
+}
+
+.social-link {
+   padding: 0.05%; 
+}
