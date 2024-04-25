@@ -28,20 +28,43 @@ h1 {
     padding: 5%;
 }
 
+@keyframes hover {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
 .boxed {
-    color: white;
-    border-radius: 10px;
-    height: 500px;
-    width: 22%;
-    background-color: darkcyan;
+  animation: hover 2s fowards;
+  color: white;
+  border-radius: 10px;
+  height: 400px;
+  width: 22%;
+  background-color: darkcyan;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+
+.boxed:hover {
+  transform: scale(1.5);
+}
+
+.boxed h1 {
+  color: blue;
+  margin: 10%;
 }
 
 .boxed p {
-    margin: 0;
+  margin: 10%;
 }
 
 footer {
-    background-color: gray;
+  padding: 2rem 1rem;
+  background-color: gray;
+  display: flex;
 }
 
 .social-link {
