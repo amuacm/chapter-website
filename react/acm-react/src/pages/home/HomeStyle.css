@@ -12,7 +12,7 @@
     object-position: center;
 }
 
-mainbody {
+.mainbody {
     display: flex;
     flex-direction: column;
     justify-content: space-between;

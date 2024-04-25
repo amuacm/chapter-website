@@ -14,7 +14,7 @@ function Box({ Title, Description, Link }) {
 
 function Home() {
   return (
-    <div classNameName="mainbody">
+    <div className="mainbody">
         <div className="splash"><img className="splash-image" src={require('./coding_splash.jpg')} alt="main screen" /></div>
 
         <div className="content-boxes">
