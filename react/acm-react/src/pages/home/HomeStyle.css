@@ -1,8 +1,15 @@
 .splash {
-    height: 15%;
+    width: 100vw;
+    height: 500px;
+    background-color: #393D3F;
     display: flex;
     justify-content: center;
     object-fit: cover;
+}
+
+.splash h1 {
+    font-size: xx-large;
+    color: #62929E;
 }
 
 .splash-image {
@@ -18,23 +25,10 @@
     justify-content: space-between;
 }
 
-h1 {
-    color: blue;
-}
-
 .content-boxes {
     display: flex;
     justify-content: space-evenly;
     padding: 5%;
-}
-
-@keyframes hover {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.2);
-  }
 }
 
 .boxed {
@@ -43,13 +37,13 @@ h1 {
   border-radius: 10px;
   height: 400px;
   width: 22%;
-  background-color: darkcyan;
+  background-color: #C6C5B9;
   transition: all 0.5s ease;
   text-decoration: none;
 }
 
 .boxed:hover {
-  transform: scale(1.5);
+  transform: scale(1.02);
 }
 
 .boxed h1 {
@@ -58,7 +52,8 @@ h1 {
 }
 
 .boxed p {
-  margin: 10%;
+    font-size: large;
+    margin: 10%;
 }
 
 footer {
@@ -69,4 +64,24 @@ footer {
 
 .social-link {
    padding: 0.05%; 
+}
+
+.custom-shape-divider-bottom-1714112145 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1714112145 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 86px;
+}
+
+.custom-shape-divider-bottom-1714112145 .shape-fill {
+    fill: #FFFFFF;
 }
