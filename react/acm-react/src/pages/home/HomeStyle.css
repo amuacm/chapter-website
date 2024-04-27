@@ -8,7 +8,8 @@
 }
 
 .splash h1 {
-    font-size: xx-large;
+    font-weight: 1000;
+    font-size: 210px;
     color: #62929E;
 }
 
@@ -22,13 +23,14 @@
 .mainbody {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    font-family: "Libre Franklin", sans-serif;
 }
 
 .content-boxes {
     display: flex;
     justify-content: space-evenly;
-    padding: 5%;
+    padding-bottom: 5%;
+    padding-top: 10%;
 }
 
 .boxed {
@@ -47,12 +49,13 @@
 }
 
 .boxed h1 {
-  color: blue;
-  margin: 10%;
+    font-weight: 700;
+    color: #3E5C76;
+    margin: 10%;
 }
 
 .boxed p {
-    font-size: large;
+    font-size: x-large;
     margin: 10%;
 }
 
@@ -66,22 +69,27 @@ footer {
    padding: 0.05%; 
 }
 
-.custom-shape-divider-bottom-1714112145 {
+.waves {
+    position: relative;
+}
+
+.custom-shape-divider-top-1714174669 {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
 }
 
-.custom-shape-divider-bottom-1714112145 svg {
+.custom-shape-divider-top-1714174669 svg {
     position: relative;
     display: block;
-    width: calc(100% + 1.3px);
-    height: 86px;
+    width: calc(112% + 1.3px);
+    height: 165px;
+    transform: rotateY(180deg);
 }
 
-.custom-shape-divider-bottom-1714112145 .shape-fill {
-    fill: #FFFFFF;
+.custom-shape-divider-top-1714174669 .shape-fill {
+    fill: #393D3F;
 }
