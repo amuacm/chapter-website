@@ -34,18 +34,18 @@
 }
 
 .boxed {
-  animation: hover 2s fowards;
-  color: white;
-  border-radius: 10px;
-  height: 400px;
-  width: 22%;
-  background-color: #C6C5B9;
-  transition: all 0.5s ease;
-  text-decoration: none;
+    animation: hover 2s fowards;
+    color: white;
+    border-radius: 10px;
+    height: 400px;
+    width: 22%;
+    background-color: #C6C5B9;
+    transition: all 0.5s ease;
+    text-decoration: none;
 }
 
 .boxed:hover {
-  transform: scale(1.02);
+    transform: scale(1.02);
 }
 
 .boxed h1 {
@@ -58,6 +58,61 @@
     font-size: x-large;
     margin: 10%;
 }
+
+/* rework the body, add main parts section and make the indivdual chapter sections */
+
+.chapters {
+    display: flex;
+    flex-direction: column;
+    gap: 100px; 
+}
+
+.chapter {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 650px;
+    gap: 150px;
+}
+
+.chapter img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+.filler {
+    grid-column: span 1;
+}
+
+.filler-2 {
+    grid-column: span 2;
+}
+
+.bigger-boxes {
+    animation: hover 2s fowards;
+    grid-column: span 2;
+    color: white;
+    border-radius: 10px;
+    background-color: #C6C5B9;
+    transition: all 0.5s ease;
+    text-decoration: none;
+}
+
+.bigger-boxes:hover {
+    transform: scale(1.02);
+}
+
+.bigger-boxes h1 {
+    font-weight: 700;
+    color: #3E5C76;
+    margin: 10%;
+}
+
+.bigger-boxes p {
+    font-size: x-large;
+    margin: 10%;
+}
+
 
 footer {
   padding: 2rem 1rem;
@@ -92,4 +147,29 @@ footer {
 
 .custom-shape-divider-top-1714174669 .shape-fill {
     fill: #393D3F;
+}
+
+footer {
+    padding: 2rem 1rem;
+    background-color: gray;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+.social-link {
+    padding: 0.05%;
+}
+
+.link-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1%;
+    padding: 0;
+}
+
+.link-list h3 {
+    padding: 0;
+    margin: 0;
 }

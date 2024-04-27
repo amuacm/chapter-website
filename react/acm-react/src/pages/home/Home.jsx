@@ -12,6 +12,15 @@ function Box({ Title, Description, Link }) {
   );
 }
 
+/* This  is  for the big content boxes that is in each chapter section */
+function BiggerBox({ Title, Description}) {
+  return (
+    <div className="bigger-boxes">
+      <h1>{Title}</h1>
+      <p>{ Description }</p>
+    </div>
+  );
+}
 
 function Home() {
   return (
@@ -56,19 +65,45 @@ function Home() {
             />
         </div>
 
-        <div>
+        <section className="chapters">
+
+          <div className="chapter">
+            <div className='filler'></div>
+            <BiggerBox Title="Intro" Description ="hope this does not look ugly" />
+            <div className='filler-2'><img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></img></div>
+            <div className='filler'></div>
+          </div>
+
+          <div className='chapter'>
+            <div className='filler'></div>
+            <div className='filler-2'><img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></img></div>
+            <BiggerBox Title="Intro" Description ="hope this does not look ugly" />
+            <div className='filler'></div>
+          </div>
+
+            
+
+        </section>
+
         <footer>
-            <div className="social-link">
-                <a href="https://discord.gg/n97UVKv3"><h2>Discord</h2></a>
-            </div>
-            <div className="social-link">
-                <h2>Twitter</h2>
-            </div>
-
+          <ul className="link-list">
+            <li>
+              <h3> Socials </h3>
+            </li>
+            <li> @ Discord </li>
+            <li> @ Twitter </li>
+            <li> @ instagram </li>
+            <li> @ github </li>
+          </ul>
+          <ul className="link-list">
+            <li>
+              <h3> Contributors </h3>
+            </li>
+            <li> [frontend] Cantu.tech </li>
+            <li> [backend] Topher </li>
+            <li> [projects] Samuel Ray </li>
+          </ul>
         </footer>
-         
-        </div>
-
     </div>
   );
 }
