@@ -64,7 +64,8 @@
 .chapters {
     display: flex;
     flex-direction: column;
-    gap: 100px; 
+    gap: 200px; 
+    margin-bottom: 100px;
 }
 
 .chapter {
@@ -77,6 +78,7 @@
 .chapter img {
     width: 100%;
     height: auto;
+    max-height: 100%;
     max-width: 100%;
 }
 
