@@ -1,0 +1,5 @@
+https://www.gyford.com/phil/writing/2022/05/24/hosting-django-cpanel/
+
+https://www.techiediaries.com/create-react-app-django/
+
+https://medium.com/@devsumitg/how-to-connect-reactjs-django-framework-c5ba268cb8be
