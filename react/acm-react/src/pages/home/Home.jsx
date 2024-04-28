@@ -26,8 +26,8 @@ function Quote({ Text, Name }) {
   return (
     <>
       <div className="quote-align">
-        <h1>{Text}</h1>
-        <p>{Name}</p>
+        <h1>"{Text}"</h1>
+        <p>-{Name}</p>
       </div>
     </>
   );
@@ -74,6 +74,10 @@ function Home() {
 
         {/* <div className="splash"><img className="splash-image" src={require('./coding_splash.jpg')} alt="main screen" /></div> */}
 
+        <Quote 
+        Text="God invented the Turing Machine"
+        Name="Professor Perugini"
+        />
         <div className="content-boxes">
             <Box
             Title="Resources"
