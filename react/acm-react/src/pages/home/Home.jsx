@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import './HomeStyle.css'; 
 
 // Box react element, that is for housing a title and description.
@@ -23,11 +24,49 @@ function BiggerBox({ Title, Description}) {
 }
 
 function Home() {
+
+    const fetchCSRFToken = async () => {
+      try {
+        const response = await axios.get('/get-csrf-token/');
+        const csrfToken = response.data.csrf_token;
+        console.log('CSRF Token:', csrfToken);
+        return csrfToken;
+      } catch (error) {
+        console.error('Error fetching CSRF token:', error);
+        return null;
+      }
+};
+
+
+
+    const handleButtonClick = () => {
+
+        {/*const csrfToken = () => {
+            axios.get('/api/get-csrf-token/')
+                .then(response => {response.data.csrf_token})
+        };*/}
+
+        axios({
+            method: 'post',
+            url: '/api/counter/',
+            headers: {
+                'X-CSRFToken': fetchCSRFToken(),
+                'Content-Type': 'application/json',
+            }
+
+
+        });
+    };
+
   return (
 
     <div className="mainbody">
 
-      <div className="splash"><h1>ACM@AMU</h1></div>
+      <div className="splash">
+          <h1>ACM@AMU</h1>
+          <button type="button" onClick={handleButtonClick}>Counter</button>
+
+      </div>
 
       <section className='waves'>
       <div className="custom-shape-divider-top-1714174669">
@@ -106,6 +145,6 @@ function Home() {
         </footer>
     </div>
   );
-}
+};
 
 export default Home;
