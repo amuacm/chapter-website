@@ -85,7 +85,7 @@ function Home() {
 
     const fetchCSRFToken = async () => {
       try {
-        const response = await axios.get('/api/get-csrf-token/');
+        const response = await axios.get('/get-csrf-token/');
         const csrfToken = response.data.csrf_token;
         console.log('CSRF Token:', csrfToken);
         return csrfToken;
@@ -98,7 +98,7 @@ function Home() {
     const [quote, setQuote] = useState('');
 
     useEffect(() => {
-        axios.get('/api/quote/')
+        axios.get('/quote/')
           .then(response => {
             setQuote(response.data.quote);
           })
