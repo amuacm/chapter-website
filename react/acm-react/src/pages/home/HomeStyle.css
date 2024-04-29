@@ -227,6 +227,10 @@ footer {
     justify-content: space-evenly;
   }
 
+li {
+	text-decoration: none;
+  }
+
 .social-link {
     padding: 0.05%;
 }

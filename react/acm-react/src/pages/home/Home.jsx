@@ -64,7 +64,6 @@ function QuoteForm({ SubBox, NameBox }) {
         placeholder="Type your quote here..."
       />
 
-      <br />
       <div className="botttom-form">
         <input
           type="text"
@@ -74,7 +73,6 @@ function QuoteForm({ SubBox, NameBox }) {
           placeholder="Put your ave email too!"
         />
 
-        <br />
         <button type="submit">Submit</button>
       </div>
     </form>
@@ -88,7 +86,7 @@ function Home() {
     <div className="mainbody">
 
       <header>
-        <img src="https://cdn4.iconfinder.com/data/icons/logos-brands-5/24/acm-512.png" alt="acm logo"/>
+        <a href="https://www.acm.org/" target="_blank"> <img src="https://cdn4.iconfinder.com/data/icons/logos-brands-5/24/acm-512.png" alt="acm logo"/></a>
         <div className="header-links">
           <div className="hlinks-align">
             <a href="https://unsplash.com/photos/macbook-pro-JO_S6ewBqAk">
