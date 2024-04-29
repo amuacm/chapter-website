@@ -33,6 +33,54 @@ function Quote({ Text, Name }) {
   );
 }
 
+function QuoteForm({ SubBox, NameBox }) {
+  const [formData, setFormData] = useState({
+    quote: "",
+    name: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Do something with the form data, like submit to a server or perform validation
+    console.log(formData);
+  };
+
+  return (
+    <form className="quote-form" onSubmit={handleSubmit}>
+      <input
+        type="text"
+        name="quote"
+        value={formData.quote}
+        onChange={handleChange}
+        placeholder="Type your quote here..."
+      />
+
+      <br />
+      <div className="botttom-form">
+        <input
+          type="text"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          placeholder="Put your ave email too!"
+        />
+
+        <br />
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  );
+}
+
+
 function Home() {
   return (
 
@@ -78,71 +126,74 @@ function Home() {
         Text="God invented the Turing Machine"
         Name="Professor Perugini"
         />
-        <div className="content-boxes">
-            <Box
-            Title="Resources"
-            Description="Here you can find the links and information regarding Ave Maria's Computer Science program."
-            Link="https://saverio.carrd.co/"
-            />
-            <Box
-            Title="Events"
-            Description="Find upcoming events on campus and online! The ACM is always looking for ideas, so also feel free to submit your vision. "
-            Link="https://theimag.org/"
-            />
-            <Box
-            Title="Showcase"
-            Description="If you're looking for inspiration or just want to see some interesting projects, explore the creativity of some of our members here."
-            Link="https://theimag.org/"
-            />
-            <Box
-            Title="Join ACM!"
-            Description="We are always looking for members! We feel that everyone can contribute in there own way."
-            Link="https://www.acm.org/"
-            />
-        </div>
-
+      <div className="content-boxes">
+        <Box
+          Title="Resources"
+          Description="Here you can find the links and information regarding Ave Maria's Computer Science program."
+          Link="https://saverio.carrd.co/"
+        />
+        <Box
+          Title="Events"
+          Description="Find upcoming events on campus and online! The ACM is always looking for ideas, so also feel free to submit your vision. "
+          Link="https://www.acm.org/"
+        />
+        <Box
+          Title="Showcase"
+          Description="If you're looking for inspiration or just want to see some interesting projects, explore the creativity of some of our members here."
+          Link="https://www.midjourney.com/home"
+        />
+        <Box
+          Title="Join ACM!"
+          Description="We are always looking for members! We feel that everyone can contribute in there own way."
+          Link="https://www.acm.org/"
+        />
+      </div>
+ 
       {/* Either here or in place of conte-boxes put the random perg quote and quote submissions box */}
       
-        <section className="chapters">
 
-          <div className="chapter">
-            <div className='filler'></div>
-            <BiggerBox Title="Intro" Description ="hope this does not look ugly" />
-            <div className='filler-2'><img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></img></div>
-            <div className='filler'></div>
-          </div>
-
-          <div className='chapter'>
-            <div className='filler'></div>
-            <div className='filler-2'><img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></img></div>
-            <BiggerBox Title="Intro" Description ="hope this does not look ugly" />
-            <div className='filler'></div>
-          </div>
-
-            
-
-        </section>
-
-        <footer>
-          <ul className="link-list">
-            <li>
-              <h3> Socials </h3>
-            </li>
-            <li> @ Discord </li>
-            <li> @ Twitter </li>
-            <li> @ instagram </li>
-            <li> @ github </li>
-          </ul>
-          <ul className="link-list">
-            <li>
-              <h3> Contributors </h3>
-            </li>
-            <li> [frontend] Cantu.tech </li>
-            <li> [backend] Topher </li>
-            <li> [projects] Samuel Ray </li>
-          </ul>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Ave_Maria_University_Seal.svg/512px-Ave_Maria_University_Seal.svg.png" alt="amu logo"/>
-        </footer>
+      <footer>
+        <ul className="link-list">
+          <li>
+            <h3> Socials </h3>
+          </li>
+          <li>
+            <a href="https://github.com/amuacm">@ Discord</a>
+          </li>
+          <li> @ Twitter </li>
+          <li> @ instagram </li>
+          <li> @ github </li>
+        </ul>
+        <ul className="link-list">
+          <li>
+            <h3> Contributors </h3>
+          </li>
+          <li>
+            <a
+              href="https://github.com/colecantu904"
+              target="_blank"
+              rel="noreferrer"
+            >
+              [frontend] Cantu.tech
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/baier-christopher/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              [backend] topher2
+            </a>
+          </li>
+        </ul>
+        <a href="https://www.avemaria.edu/" target="_blank" rel="noreferrer">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Ave_Maria_University_Seal.svg/512px-Ave_Maria_University_Seal.svg.png"
+            alt="amu logo"
+          />
+        </a>
+      </footer> 
     </div>
   );
 }

@@ -34,7 +34,10 @@ header {
     text-decoration: none;
     color: #3e5c76;
   }
-  
+
+  .quote-align h1 {
+  max-width: 95%;
+}
   .quote-align {
     display: flex;
     flex-direction: column;
@@ -48,13 +51,16 @@ header {
   }
 
 .splash {
-    width: 100vw;
-    height: 500px;
-    background-color: #393D3F;
-    display: flex;
-    justify-content: center;
-    object-fit: cover;
+  width: 100vw;
+  height: 500px;
+  background-color: #393d3f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+
+
 
 .splash h1 {
     font-weight: 1000;
@@ -169,6 +175,8 @@ footer {
   padding: 2rem 1rem;
   background-color: gray;
   display: flex;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 .social-link {
@@ -199,6 +207,19 @@ footer {
 .custom-shape-divider-top-1714174669 .shape-fill {
     fill: #393D3F;
 }
+
+.quote-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.bottom-form {
+  display: flex;
+  flex-direction: row;
+}
+
 
 footer {
     padding: 2rem 1rem;
