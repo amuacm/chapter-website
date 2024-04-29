@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from "react";
 import './HomeStyle.css'; 
 
 // Box react element, that is for housing a title and description.
@@ -150,7 +151,7 @@ function Home() {
       </div>
  
       {/* Either here or in place of conte-boxes put the random perg quote and quote submissions box */}
-      
+    <QuoteForm Text="Type your quote here..." Name="Put your ave email too!" /> 
 
       <footer>
         <ul className="link-list">
