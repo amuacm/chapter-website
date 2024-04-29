@@ -8,12 +8,15 @@
 from django.db import models
 
 
-# testing communication with react
-class Counter(models.Model):
+class AcmapiCounter(models.Model):
+    id = models.BigAutoField(primary_key=True)
     total = models.IntegerField()
 
+    class Meta:
+        managed = False
+        db_table = 'AcmApi_counter'
 
-#Django generated models
+
 class AuthGroup(models.Model):
     name = models.CharField(unique=True, max_length=150)
 
@@ -126,3 +129,12 @@ class DjangoSession(models.Model):
     class Meta:
         managed = False
         db_table = 'django_session'
+
+
+class Quotes(models.Model):
+    text = models.TextField()
+    submitter = models.TextField()
+
+    class Meta:
+        managed = False
+        db_table = 'quotes'

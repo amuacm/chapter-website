@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './HomeStyle.css'; 
 
@@ -23,6 +23,17 @@ function BiggerBox({ Title, Description}) {
   );
 }
 
+function Quote({ Text, Name }) {
+  return (
+    <>
+      <div className="quote-align">
+        <h1>"{Text}"</h1>
+        <p>-{Name}</p>
+      </div>
+    </>
+  );
+}
+
 function Home() {
 
     const fetchCSRFToken = async () => {
@@ -37,26 +48,17 @@ function Home() {
       }
 };
 
+    const [quote, setQuote] = useState('');
 
-
-    const handleButtonClick = () => {
-
-        {/*const csrfToken = () => {
-            axios.get('/api/get-csrf-token/')
-                .then(response => {response.data.csrf_token})
-        };*/}
-
-        axios({
-            method: 'post',
-            url: '/api/counter/',
-            headers: {
-                'X-CSRFToken': fetchCSRFToken(),
-                'Content-Type': 'application/json',
-            }
-
-
-        });
-    };
+    useEffect(() => {
+        axios.get('/api/quote/')
+          .then(response => {
+            setQuote(response.data.quote);
+          })
+          .catch(error => {
+            console.log(error);
+          });
+    }, []);
 
   return (
 
@@ -64,7 +66,6 @@ function Home() {
 
       <div className="splash">
           <h1>ACM@AMU</h1>
-          <button type="button" onClick={handleButtonClick}>Counter</button>
 
       </div>
 
@@ -81,6 +82,11 @@ function Home() {
 
         {/* <div className="splash"><img className="splash-image" src={require('./coding_splash.jpg')} alt="main screen" /></div> */}
 
+      
+        <Quote 
+        Text={quote}
+        Name="Professor Perugini"
+        />
         <div className="content-boxes">
             <Box
             Title="Resources"
