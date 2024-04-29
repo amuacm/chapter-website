@@ -25,7 +25,7 @@ def counter(request):
         new = models.Counter(total=1)
         new.save()
 
-
+# random quote from accepted quote list
 @api_view(['GET'])
 def quote(request):
     table = models.Quotes.objects.all()
