@@ -1,9 +1,0 @@
-EVENTS:
-    Form to record name, idea, email -> to be stored in database.
-
-Resources:
-    Links Gallery.
-
-Showcase:
-    Sam and Michael's individual projects
-    Demos?

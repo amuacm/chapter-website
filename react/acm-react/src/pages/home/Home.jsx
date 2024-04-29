@@ -1,5 +1,6 @@
 import React from 'react';
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from 'axios';
 import './HomeStyle.css'; 
 
 // Box react element, that is for housing a title and description.
@@ -81,6 +82,31 @@ function QuoteForm({ SubBox, NameBox }) {
 
 
 function Home() {
+
+    const fetchCSRFToken = async () => {
+      try {
+        const response = await axios.get('/api/get-csrf-token/');
+        const csrfToken = response.data.csrf_token;
+        console.log('CSRF Token:', csrfToken);
+        return csrfToken;
+      } catch (error) {
+        console.error('Error fetching CSRF token:', error);
+        return null;
+      }
+};
+
+    const [quote, setQuote] = useState('');
+
+    useEffect(() => {
+        axios.get('/api/quote/')
+          .then(response => {
+            setQuote(response.data.quote);
+          })
+          .catch(error => {
+            console.log(error);
+          });
+    }, []);
+
   return (
 
     <div className="mainbody">
@@ -119,12 +145,12 @@ function Home() {
     </section>
 
 
-        {/* <div className="splash"><img className="splash-image" src={require('./coding_splash.jpg')} alt="main screen" /></div> */}
+      {/* <div className="splash"><img className="splash-image" src={require('./coding_splash.jpg')} alt="main screen" /></div> */}
 
-        <Quote 
-        Text="God invented the Turing Machine"
-        Name="Professor Perugini"
-        />
+      <Quote 
+      Text={quote}
+      Name="Professor Perugini"
+      />
       <div className="content-boxes">
         <Box
           Title="Resources"
@@ -156,12 +182,12 @@ function Home() {
           <li>
             <h3> Socials </h3>
           </li>
-          <li>
-            <a href="https://github.com/amuacm">@ Discord</a>
-          </li>
+          <li> @ Discord </li>
           <li> @ Twitter </li>
-          <li> @ instagram </li>
-          <li> @ github </li>
+          <li> @ Instagram </li>
+          <li>
+            <a href="https://github.com/amuacm"> @ Github </a>
+          </li>
         </ul>
         <ul className="link-list">
           <li>
@@ -173,17 +199,20 @@ function Home() {
               target="_blank"
               rel="noreferrer"
             >
-              [frontend] Cantu.tech
+              [frontend] cantu.tech
             </a>
           </li>
           <li>
             <a
-              href="https://www.linkedin.com/in/baier-christopher/"
+              href="https://www.github.com/cbaier33/"
               target="_blank"
               rel="noreferrer"
             >
-              [backend] topher2
+              [backend] baier.tech
             </a>
+          </li>
+          <li>
+            <a href="https://www.github.com/amuacm/chapter-website"> Source Code </a>
           </li>
         </ul>
         <a href="https://www.avemaria.edu/" target="_blank" rel="noreferrer">
