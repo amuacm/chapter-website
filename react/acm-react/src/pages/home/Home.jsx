@@ -22,10 +22,41 @@ function BiggerBox({ Title, Description}) {
   );
 }
 
+function Quote({ Text, Name }) {
+  return (
+    <>
+      <div className="quote-align">
+        <h1>{Text}</h1>
+        <p>{Name}</p>
+      </div>
+    </>
+  );
+}
+
 function Home() {
   return (
 
     <div className="mainbody">
+
+      <header>
+        <img src="https://cdn4.iconfinder.com/data/icons/logos-brands-5/24/acm-512.png" alt="acm logo"/>
+        <div className="header-links">
+          <div className="hlinks-align">
+            <a href="https://unsplash.com/photos/macbook-pro-JO_S6ewBqAk">
+              Resources
+            </a>
+            <a href="https://unsplash.com/photos/macbook-pro-JO_S6ewBqAk">
+              Events
+            </a>
+            <a href="https://unsplash.com/photos/macbook-pro-JO_S6ewBqAk">
+              Showcase
+            </a>
+            <a href="https://unsplash.com/photos/macbook-pro-JO_S6ewBqAk">
+              Join!
+            </a>
+          </div>
+        </div>
+      </header>
 
       <div className="splash"><h1>ACM@AMU</h1></div>
 
@@ -106,6 +137,7 @@ function Home() {
             <li> [backend] Topher </li>
             <li> [projects] Samuel Ray </li>
           </ul>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Ave_Maria_University_Seal.svg/512px-Ave_Maria_University_Seal.svg.png" alt="amu logo"/>
         </footer>
     </div>
   );
