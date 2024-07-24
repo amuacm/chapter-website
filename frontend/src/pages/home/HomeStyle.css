@@ -87,6 +87,12 @@ header {
     padding-top: 10%;
 }
 
+.calendar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .boxed {
     animation: hover 2s fowards;
     color: white;

@@ -80,6 +80,19 @@ function QuoteForm({ SubBox, NameBox }) {
   );
 }
 
+function randQuote() {
+    var quotes = [
+      "The world is your oyster.",
+      "This should be mystifying to you.",
+      "You are the master of the universe, you can do whatever you want.",
+      "If you have a solid foundation, you can teach yourself anything.",
+      "That's the million dollar question.",
+      "Python really is a hodgepodge of a language."
+    ]
+    var quote = quotes[Math.floor(Math.random() * quotes.length)];
+    return quote;
+}
+
 
 function Home() {
 
@@ -95,6 +108,9 @@ function Home() {
       }
 };
 
+    const quote = randQuote()
+
+    {/*
     const [quote, setQuote] = useState('');
 
     useEffect(() => {
@@ -105,7 +121,7 @@ function Home() {
           .catch(error => {
             console.log(error);
           });
-    }, []);
+    }, []); */}
 
   return (
 
@@ -173,9 +189,13 @@ function Home() {
           Link="https://www.acm.org/"
         />
       </div>
- 
+
+      <div className="calendar">
+        <iframe src="https://calendar.google.com/calendar/embed?src=ec3c45012042ace64ab55c363fd638095e85d94dd5ba0dfa47f016010a571a0a%40group.calendar.google.com&ctz=UTC" style={{border: 0}} width="1000" height="600" frameborder="0" scrolling="no"></iframe>
+      </div>
+
       {/* Either here or in place of conte-boxes put the random perg quote and quote submissions box */}
-    <QuoteForm Text="Type your quote here..." Name="Put your ave email too!" /> 
+      {/* <QuoteForm Text="Type your quote here..." Name="Put your ave email too!" /> */}
 
       <footer>
         <ul className="link-list">
